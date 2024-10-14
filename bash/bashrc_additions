@@ -1,0 +1,31 @@
+###############################################################################
+#
+# File:
+#   bashrc_additions
+#
+# Description:
+#   Additional functions and setting to add at the end of ~/.bashrc.
+#
+# --------------------------------------------------------------------------- #
+
+
+# Git branch in prompt.
+#
+# \[\033[1;32m\] makes the user and machine part bold green (1 for bold and
+#   32 for green).
+# \[\033[1;34m\] makes the directory name bold dark blue (34 is dark blue).
+# \[\033[32m\] for the git branch text (without bold).
+# \[\033[00m\] resets all the styles to default after the git branch to avoid
+#   affecting the rest of your terminal.
+# \[\033[31m\] changes the git branch part to red
+
+# Function to get the current git branch
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+# Set the PS1 with bold green user@host, bold dark blue directory, and red git branch
+export PS1="\[\033[1;32m\]\u@\h \[\033[1;34m\]\W\[\033[0m\]\[\033[31m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+
+# ----------------------------------------------------------------- End-of-file
