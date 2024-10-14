@@ -1,0 +1,36 @@
+[user]
+	name = Gijsbert
+	email = gijsbert.wierink@gmail.com
+
+[init]
+	defaultBranch = master
+
+[core]
+	editor = vim
+	pager = less
+
+[diff]
+	tool = vimdiff
+
+[alias]
+	b = branch
+	
+	s = status
+
+	c = commit
+	cm = commit -m
+
+	l = log --oneline
+	lg = log --oneline --graph --decorate
+
+	m = merge
+
+	co = checkout
+	com = checkout master
+	cob = checkout branch
+
+	pso = push origin
+	pom = push origin master
+
+	r = remote
+	rv = remote -v
