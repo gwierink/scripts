@@ -1,6 +1,5 @@
-[user]
-	name = Gijsbert
-	email = gijsbert.wierink@gmail.com
+[include]
+	path = ~/.gitconfig.local
 
 [init]
 	defaultBranch = master
