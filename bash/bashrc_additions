@@ -6,6 +6,12 @@
 # Description:
 #   Additional functions and setting to add at the end of ~/.bashrc.
 #
+# Use:
+#   Added this at the bottom of my ~/.bashrc:
+#    # Add my own additions
+#    export SCRIPTS_PATH=$HOME/scripts/scripts/
+#    . $SCRIPTS_PATH/bash/bashrc_additions
+#
 # --------------------------------------------------------------------------- #
 
 
