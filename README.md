@@ -8,7 +8,7 @@ Assuming that the scripts repo is located in $HOME/scripts, do the following.
 When git has not yet been configured at all, first set your name and e-mail
 to work with your repo:
 ```bash
-git config --global user. email "you@example.com"
+git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
 
@@ -26,7 +26,13 @@ e-mail local by moving `$HOME/.gitconfig` to `$HOME/.gitconfig.local`:
 mv ~/.gitconfig ~/.gitconfig.local
 ```
 
-Finally, soft link the gitconfig file:
+Because I have more scripts, I place the current scripts repository in a
+directory called ```$HOME/scripts```. That is,
+```bash
+mkdir ~/scripts && cd !$ && git clone git@github.com:gwierink/scripts.git
+```
+
+Finally, soft link the gitconfig file (note the "double script" in the path):
 ```bash
 ln -s ~/scripts/scripts/git/gitconfig ~/.gitconfig
 ```
