@@ -41,7 +41,7 @@ ln -s ~/scripts/scripts/git/gitconfig ~/.gitconfig
 The scripts repo collects additions to `$HOME/.bashrc` in a separate file.
 Source it in `.bashrc` by:
 ```bash
-echo -e "\n# Add my own additions\nsource $HOME/scripts/scripts/bash/bashrc_additions"
+echo -e "\n# Add my own additions\nsource $HOME/scripts/scripts/bash/bashrc_additions" >> ~/.bashrc
 ```
 
 ## vim
